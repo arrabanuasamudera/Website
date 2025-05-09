@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #003366;
+  }
+  .container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    box-sizing: border-box; /* Memastikan padding dan border dihitung dalam lebar elemen */
+  }
+  
+  .header {
+    background-color: #ffffff;
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo img {
+    height: 28px;
+    width: auto;
+  }
+  
+  .navigation {
+    flex-grow: 1;
+    text-align: right;
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-links {
+    list-style: none;
+  }
+  .nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: #003366;
+    font-weight: bold;
+  }
+  .hero {
+    background: url('assets/hero-ship.jpeg') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out; /* Transisi mulus */
+  }
+  
+  .hero-content h1 {
+    font-size: 48px;
+  }
+  
+  .hero-content p {
+    margin: 20px 0;
+    font-size: 20px;
+  }
+  
+  .hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .btn-primary {
+    background: #0077b6;
+    padding: 10px 25px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  .about, .services, .contact {
+    padding: 60px 0;
+  }
+  .vision-mission {
+    gap: 40px;
+  }
+  .service-cards {
+    gap: 20px;
+  }
+  .card {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 30%;
+  }
+  .contact-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .contact-item img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .contact-item a, 
+  .contact-item p {
+    font-size: 1rem;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .contact-item a:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .contact-info-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .footer {
+    background: #003366;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+  }
+  .wave-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+  .wave-container svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+  }
+  .about-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .about-photo {
+    flex: 1 1 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-photo img.responsive-img {
+    width: 100%;
+    max-width: 220px; /* lebih kecil dari sebelumnya */
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .about-photo img.responsive-img:hover {
+    transform: scale(1.03);
+  }
+  
+  .vision-mission {
+    flex: 1 1 65%;
+  }
+  
+  .vision, .mission {
+    margin-bottom: 25px;
+  }
+  
+  .vision h3, .mission h3 {
+    margin-bottom: 12px;
+    color: #0077b6;
+    font-size: 22px;
+  }
+  
+  .vision p, .mission ul {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+  }
+  
+  .mission ul {
+    list-style: disc inside;
+    padding-left: 0;
+  }
+  
+  .mission ul li {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive Mobile */
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .about-photo, .vision-mission {
+      flex: 1 1 100%;
+    }
+  
+    .about-photo img.responsive-img {
+      max-width: 70%; /* di HP, tetap lebih kecil */
+    }
+  }
+
+  
+  
+  
